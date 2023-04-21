@@ -8,7 +8,7 @@ time complexity.
 
 Time Complexity (APS/Timsort/introsort/quicksort)           |  Memory Complexity (APS/Timsort/introsort/quicksort)  
 :-------------------------:|:-------------------------:
-![tc_aps_timsort_introsort_quicksort](images/tc_aps_timsort_introsort_quicksort.png) | ![tc_aps_timsort_introsort_quicksort](images/mc_aps_timsort_introsort_quicksort.png)
+![tc_aps_timsort_introsort_quicksort](images/tc_aps_timsort_introsort_quicksort.png) | ![mc_aps_timsort_introsort_quicksort](images/mc_aps_timsort_introsort_quicksort.png)
 
 ### Developed by:
 
