@@ -1,5 +1,4 @@
 import pandas as pd
-from pandas import DataFrame
 
 data1 = pd.read_csv('./results_time.csv')
 data2 = pd.read_csv('./results_mem.csv')
