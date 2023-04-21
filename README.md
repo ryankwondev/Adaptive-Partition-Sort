@@ -2,7 +2,7 @@
 
 > 💡 Currently Prepraing for the KIISE KSC 2023 and IEEE TC.
 
-Adaptive Partition Sort (APS) is a hybrid sorting method that merges Quick Sort and Merge Sort strengths. APS adapts to
+Adaptive Partition Sort (APS) is a hybrid sorting method that merges the strengths of Quick Sort and Merge Sort. APS adapts to
 input data and a user-defined threshold, aiming for enhanced average-case performance while preserving stability and
 time complexity.
 
