@@ -15,6 +15,9 @@ Time Complexity <br/> (APS/Timsort/introsort/quicksort)           |  Memory Comp
 - Ryan Donghan Kwon, Hana Academy Seoul (kznm.develop@gmail.com)
 - DoHyun Lim, Korea Science Academy of KAIST (shiueo.csh@gmail.com)
 
+### Research Contributers:
+- Jeongyeon Park, Hana Academy Seoul.
+
 ### Special thanks to:
 
 - Jaeon Park (https://orcid.org/0009-0008-3144-4903) for Validate APS algorithms and optimize
