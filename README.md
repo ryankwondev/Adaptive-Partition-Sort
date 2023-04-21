@@ -10,6 +10,10 @@ Time Complexity <br/> (APS/Timsort/introsort/quicksort)           |  Memory Comp
 :-------------------------:|:-------------------------:
 ![tc_aps_timsort_introsort_quicksort](images/tc_aps_timsort_introsort_quicksort.png) | ![mc_aps_timsort_introsort_quicksort](images/mc_aps_timsort_introsort_quicksort.png)
 
+Time Performance Compared <br/> (APS/Timsort/introsort/quicksort)           |  Memory Performance Compared <br/> (APS/Timsort/introsort/quicksort)  
+:-------------------------:|:-------------------------:
+![Time Benchmark](images/perf_time.png) | ![Memory Benchmark](images/perf_mem.png)
+
 ### Developed by:
 
 - Ryan Donghan Kwon, Hana Academy Seoul (kznm.develop@gmail.com)
