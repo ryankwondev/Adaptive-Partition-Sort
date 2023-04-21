@@ -41,7 +41,7 @@ if __name__ == '__main__':
         m.append(peak)
         print('Memory Routine:', i, sorted(rand) == arr)
 
-    print('[Merge Sort]')
+    print('[Counting Sort]')
 
     print('Best time(ms): ', min(t) * 1000)
     print('Worst time(ms): ', max(t) * 1000)
