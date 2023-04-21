@@ -83,11 +83,13 @@ if __name__ == '__main__':
 
     t, m = [], []
 
+    APS_THRESHOLD = 0
+
     for i in range(64):
         rand = [random.randint(0, 100000) for _ in range(100000)]
         arr = rand.copy()
         start = time.time()
-        adaptive_partition_sort(arr, 0)
+        adaptive_partition_sort(arr, APS_THRESHOLD)
         end = time.time()
         t.append(end - start)
         print('Time Routine:', i, sorted(rand) == arr)
@@ -96,13 +98,13 @@ if __name__ == '__main__':
         rand = [random.randint(0, 100000) for _ in range(100000)]
         arr = rand.copy()
         tracemalloc.start()
-        adaptive_partition_sort(arr, 0)
+        adaptive_partition_sort(arr, APS_THRESHOLD)
         current, peak = tracemalloc.get_traced_memory()
         tracemalloc.stop()
         m.append(peak)
         print('Memory Routine:', i, sorted(rand) == arr)
 
-    print('[Adaptive Partition Sort]')
+    print(f'[Adaptive Partition Sort threshold={APS_THRESHOLD}] ')
 
     print('Best time(ms): ', min(t) * 1000)
     print('Worst time(ms): ', max(t) * 1000)
