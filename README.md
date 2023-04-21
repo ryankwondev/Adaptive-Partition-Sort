@@ -11,5 +11,5 @@ time complexity.
 
 ### Special thanks to:
 
-- Jaeon Park, Seoul National University (https://orcid.org/0009-0008-3144-4903) for Validate APS algorithms and optimize
+- Jaeon Park (https://orcid.org/0009-0008-3144-4903) for Validate APS algorithms and optimize
   algorithms of comparison
