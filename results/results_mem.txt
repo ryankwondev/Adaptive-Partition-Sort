@@ -1,0 +1,43 @@
+[1M]
+    Algorithm  Best Memory  Worst Memory  Average Memory
+0  Quick Sort     34740544      42735509     38340269.25
+1  Merge Sort     16783376      16793302     16785857.50
+2   Introsort         1972         24626         7917.75
+3     Timsort      8334996       8336313      8335325.25
+4         APS         2760         14012         5589.00
+
+
+[1M (16)]
+    Algorithm  Best Memory  Worst Memory  Average Memory
+0  Quick Sort     28553776      33853080      30429642.0
+1  Merge Sort     17017108      17023876      17020060.0
+2   Introsort         2652         27556          8899.0
+3     Timsort      8334996       8334996       8334996.0
+4         APS         3908         20988          8178.0
+
+
+[ASC]
+    Algorithm  Best Memory  Worst Memory  Average Memory
+0  Quick Sort     24693992      24693992      24693992.0
+1  Merge Sort     20000056      20000056      20000056.0
+2   Introsort         1420          4300          2140.0
+3     Timsort      8334996       8334996       8334996.0
+4         APS         2648          4600          3152.0
+
+
+[DSC]
+    Algorithm  Best Memory  Worst Memory  Average Memory
+0  Quick Sort     24694016      24694016      24694016.0
+1  Merge Sort     20000056      20000056      20000056.0
+2   Introsort         1952          3392          2312.0
+3     Timsort      8334996       8334996       8334996.0
+4         APS         2648          4112          3014.0
+
+
+[Pipeorgan]
+Quicksort: Error!
+    Algorithm  Best Memory  Worst Memory  Average Memory
+0  Merge Sort     18000084      18011578     18002957.50
+1   Introsort         2624         31010         9776.75
+2     Timsort      8334996       8337193      8335545.25
+3         APS         2676         13788         5470.00
