@@ -5,34 +5,70 @@ import tracemalloc
 import matplotlib.pyplot as plt
 
 from sorting.aps import adaptive_partition_sort
+from sorting.introsort import introsort
+from sorting.timsort import timsort
 
-t, m = [], []
+aps_t, aps_m = [], []
+timsort_t, timsort_m = [], []
+introsort_t, introsort_m = [], []
 
 # time
-for i in range(10000):
+for i in range(1, 5001):
     rand = [random.randint(0, i) for _ in range(i)]
+
     start = time.time()
     arr = adaptive_partition_sort(rand)
     end = time.time()
-    t.append(end - start)
+    aps_t.append((end - start) * 1000)
+
+    start = time.time()
+    arr = timsort(rand)
+    end = time.time()
+    timsort_t.append((end - start) * 1000)
+
+    start = time.time()
+    arr = introsort(rand)
+    end = time.time()
+    introsort_t.append((end - start) * 1000)
 
     if i % 100 == 0:
-        print(i)
+        print(i, aps_t[-1], timsort_t[-1], introsort_t[-1])
 
-plt.plot(t)
+plt.plot(aps_t)
+plt.plot(timsort_t)
+plt.plot(introsort_t)
+plt.legend(['APS', 'Timsort', 'Introsort'])
+plt.title('Time Complexity')
 plt.show()
 
 # memory
-for i in range(10000):
+for i in range(1, 5001):
     rand = [random.randint(0, i) for _ in range(i)]
+
     tracemalloc.start()
     arr = adaptive_partition_sort(rand)
     current, peak = tracemalloc.get_traced_memory()
-    m.append(peak)
+    aps_m.append(peak)
+    tracemalloc.stop()
+
+    tracemalloc.start()
+    arr = timsort(rand)
+    current, peak = tracemalloc.get_traced_memory()
+    timsort_m.append(peak)
+    tracemalloc.stop()
+
+    tracemalloc.start()
+    arr = introsort(rand)
+    current, peak = tracemalloc.get_traced_memory()
+    introsort_m.append(peak)
     tracemalloc.stop()
 
     if i % 100 == 0:
-        print(i)
+        print(i, aps_m[-1], timsort_m[-1], introsort_m[-1])
 
-plt.plot(m)
+plt.plot(aps_m)
+plt.plot(timsort_m)
+plt.plot(introsort_m)
+plt.legend(['APS', 'Timsort', 'Introsort'])
+plt.title('Memory Complexity')
 plt.show()
