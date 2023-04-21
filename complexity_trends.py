@@ -14,7 +14,7 @@ timsort_t, timsort_m = [], []
 introsort_t, introsort_m = [], []
 quick_sort_t, quick_sort_m = [], []
 
-N = 1500
+N = 10000
 
 # time
 for i in range(1, N+1):
