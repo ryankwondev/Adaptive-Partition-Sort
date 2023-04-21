@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/venv/lib" />
       <excludeFolder url="file://$MODULE_DIR$/venv/share" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (Adaptive-Partition-Sort)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
