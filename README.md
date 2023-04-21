@@ -10,9 +10,11 @@ Time Complexity <br/> (APS/Timsort/introsort/quicksort)           |  Memory Comp
 :-------------------------:|:-------------------------:
 ![tc_aps_timsort_introsort_quicksort](images/tc_aps_timsort_introsort_quicksort.png) | ![mc_aps_timsort_introsort_quicksort](images/mc_aps_timsort_introsort_quicksort.png)
 
-Time Performance Compared <br/> (APS/Timsort/introsort/quicksort)           |  Memory Performance Compared <br/> (APS/Timsort/introsort/quicksort)  
-:-------------------------:|:-------------------------:
-![Time Benchmark](images/perf_time.png) | ![Memory Benchmark](images/perf_mem.png)
+| Time Performance Compared <br/> (APS/Timsort/introsort/quicksort)           |  
+|:-------------------------:|
+| <img src="images/perf_time.png" width="800px"/> | 
+| Memory Performance Compared <br/> (APS/Timsort/introsort/quicksort)  |
+| <img src="images/perf_mem.png" width="800px"/> |
 
 ### Developed by:
 
