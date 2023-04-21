@@ -1,0 +1,43 @@
+[1M]
+    Algorithm    Best Time   Worst Time  Average Time
+0  Quick Sort  4383.903980  4886.519670   4700.676873
+1  Merge Sort  5759.128332  5938.918829   5830.576286
+2   Introsort  4031.998396  4781.817198   4374.694839
+3     Timsort  6849.809170  7266.794205   7042.796165
+4         APS  2818.380117  3450.746059   2998.993427
+
+
+[1M (16)]
+    Algorithm    Best Time   Worst Time  Average Time
+0  Quick Sort   402.944326   629.094362    471.088782
+1  Merge Sort  4820.652008  5735.326290   5144.462600
+2   Introsort  6771.238804  8228.454590   7768.269539
+3     Timsort  3899.584770  4300.028324   4042.017475
+4         APS  3006.283998  3209.292889   3084.062099
+
+
+[ASC]
+    Algorithm     Best Time    Worst Time  Average Time
+0  Quick Sort   2515.178442   2557.795048   2538.884819
+1  Merge Sort   3248.262405   3346.258163   3288.864195
+2   Introsort  17248.085022  17434.244871  17318.067193
+3     Timsort   4196.762562   4309.809446   4257.922590
+4         APS   2154.386759   2190.766096   2174.505770
+
+
+[DSC]
+    Algorithm     Best Time    Worst Time  Average Time
+0  Quick Sort   2505.248785   2561.921597   2540.141642
+1  Merge Sort   2981.353045   3325.274229   3087.931573
+2   Introsort  14987.946749  15240.913868  15127.493382
+3     Timsort   3947.676420   4087.805748   3988.471031
+4         APS   1995.463371   2065.575123   2040.380836
+
+
+[Pipeorgan]
+Quicksort: Error!
+    Algorithm     Best Time    Worst Time  Average Time
+0  Merge Sort   2938.471794   3066.458941   3014.505267
+1   Introsort  12352.588892  12964.611530  12643.121183
+2     Timsort   3839.988947   4198.324203   3981.284022
+3         APS   1973.504782   2013.229370   1998.595476
