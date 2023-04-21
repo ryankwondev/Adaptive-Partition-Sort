@@ -1,5 +1,6 @@
 import random
 
+
 def _randomdata(size, maxvalues=None):
     if maxvalues:
         return [random.randint(0, maxvalues) for _ in range(size)]
@@ -8,19 +9,25 @@ def _randomdata(size, maxvalues=None):
 
 
 def shuffled():
-    return _randomdata(10 ** 6)
+    return _randomdata(10**6)
+
 
 def shuffled_16_values():
-    return _randomdata(10 ** 6, 16)
+    return _randomdata(10**6, 16)
+
 
 def ascending():
-    return [i for i in range(10 ** 6)]
+    return [i for i in range(10**6)]
+
 
 def descending():
-    return [10 ** 6 - i for i in range(10 ** 6)]
+    return [10**6 - i for i in range(10**6)]
+
 
 def pipe_organ():
-    return [int(i) for i in range(int(10 ** 6 / 2))] + [int(10 ** 6 / 2 - i) for i in range(int(10 ** 6 / 2))]
+    return [int(i) for i in range(int(10**6 / 2))] + [
+        int(10**6 / 2 - i) for i in range(int(10**6 / 2))
+    ]
 
 
 """ if __name__ == "__main__":
@@ -46,4 +53,3 @@ def pipe_organ():
         for item in pipe_organ:
             fp.write(f'{item}\n')
  """
-

@@ -66,7 +66,6 @@ def timsort(array):
 
     size = minrun
     while size < n:
-
         for left in range(0, n, 2 * size):
             mid = min(n - 1, left + size - 1)
             right = min((left + 2 * size - 1), (n - 1))
@@ -75,7 +74,7 @@ def timsort(array):
         size = 2 * size
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import random
     import time
     import tracemalloc
@@ -89,7 +88,7 @@ if __name__ == '__main__':
         timsort(arr)
         end = time.time()
         t.append(end - start)
-        print('Time Routine:', i, sorted(rand) == arr)
+        print("Time Routine:", i, sorted(rand) == arr)
 
     for i in range(64):
         rand = [random.randint(0, 100000) for _ in range(100000)]
@@ -99,14 +98,14 @@ if __name__ == '__main__':
         current, peak = tracemalloc.get_traced_memory()
         tracemalloc.stop()
         m.append(peak)
-        print('Memory Routine:', i, sorted(rand) == arr)
+        print("Memory Routine:", i, sorted(rand) == arr)
 
-    print('[Timsort]')
+    print("[Timsort]")
 
-    print('Best time(ms): ', min(t) * 1000)
-    print('Worst time(ms): ', max(t) * 1000)
-    print('Average time(ms): ', sum(t) / len(t) * 1000)
+    print("Best time(ms): ", min(t) * 1000)
+    print("Worst time(ms): ", max(t) * 1000)
+    print("Average time(ms): ", sum(t) / len(t) * 1000)
 
-    print('Best space(bytes): ', min(m))
-    print('Worst space(bytes): ', max(m))
-    print('Average space(bytes): ', sum(m) / len(m))
+    print("Best space(bytes): ", min(m))
+    print("Worst space(bytes): ", max(m))
+    print("Average space(bytes): ", sum(m) / len(m))
