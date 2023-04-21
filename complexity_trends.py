@@ -14,7 +14,7 @@ timsort_t, timsort_m = [], []
 introsort_t, introsort_m = [], []
 quick_sort_t, quick_sort_m = [], []
 
-N = 5000
+N = 10000
 
 # time
 for i in range(1, N+1):
@@ -47,7 +47,7 @@ plt.plot(aps_t)
 plt.plot(timsort_t)
 plt.plot(introsort_t)
 plt.plot(quick_sort_t)
-plt.legend(['APS', 'Timsort', 'Introsort', 'quick_sort'])
+plt.legend(['APS', 'Timsort', 'Introsort', 'Quick_sort'])
 plt.title('Time Complexity')
 plt.show()
 
@@ -86,6 +86,6 @@ plt.plot(aps_m)
 plt.plot(timsort_m)
 plt.plot(introsort_m)
 plt.plot(quick_sort_m)
-plt.legend(['APS', 'Timsort', 'Introsort', 'quicksort'])
+plt.legend(['APS', 'Timsort', 'Introsort', 'Quicksort'])
 plt.title('Memory Complexity')
 plt.show()
