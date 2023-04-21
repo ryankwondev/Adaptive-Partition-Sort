@@ -6,7 +6,7 @@ Adaptive Partition Sort (APS) is a hybrid sorting method that merges Quick Sort 
 input data and a user-defined threshold, aiming for enhanced average-case performance while preserving stability and
 time complexity.
 
-Time Complexity (APS/Timsort/introsort/quicksort)           |  Memory Complexity (APS/Timsort/introsort/quicksort)  
+Time Complexity <br/> (APS/Timsort/introsort/quicksort)           |  Memory Complexity <br/> (APS/Timsort/introsort/quicksort)  
 :-------------------------:|:-------------------------:
 ![tc_aps_timsort_introsort_quicksort](images/tc_aps_timsort_introsort_quicksort.png) | ![mc_aps_timsort_introsort_quicksort](images/mc_aps_timsort_introsort_quicksort.png)
 
