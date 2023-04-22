@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <vector>
 #include "APS.h"
+
 using namespace std;
 int* MakeRandomArray(int size, int range) {
 	int* arr = new int[size];
@@ -50,8 +51,8 @@ bool CheckAccuracy(vector<int> &data) {
 int main() {
 	srand((unsigned)time(NULL));
 	
-	int size = 10000000;
-	int range = 10000000;
+	int size = 500000000;
+	int range = 1000000000;
 	
 	auto arr1 = MakeRandomArray(size, range);
 	auto arr2 = CopyArray2Vector(arr1, size);
@@ -59,23 +60,28 @@ int main() {
 	
 	int start, end;
 	
+	
 	start = clock();
 	APS::Sort(arr1, size);
 	end = clock();
 	cout << "QUICK APS : " << end - start << "ms" << endl;
 	cout << "Accuracy : " << CheckAccuracy(arr1, size) << endl << endl;
+
 	
 	start = clock();
 	std::sort(arr2.begin(), arr2.end());
 	end = clock();
 	cout << "std::sort : " << end - start << "ms" << endl;
-	cout << "Accuracy : " << CheckAccuracy(arr2) << endl << endl;
+	cout << "Accuracy : " << CheckAccuracy(arr2) << endl << endl; 
 
+	
+	
 	start = clock();
 	std::qsort(arr3, size, sizeof(int), compare);
 	end = clock();
 	cout << "std::qsort : " << end - start << "ms" << endl;
 	cout << "Accuracy : " << CheckAccuracy(arr3, size) << endl << endl;
+	
 
 	delete[] arr1, arr3;
 	return 0;
