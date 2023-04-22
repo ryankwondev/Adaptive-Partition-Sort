@@ -41,47 +41,77 @@ if __name__ == "__main__":
     for i in range(64):
         rand_dataset.append(generate_data(sample_size))
 
-    df = pd.DataFrame(columns=['Algorithm', 'Best Time', 'Worst Time', 'Average Time'])  # milliseconds
+    df = pd.DataFrame(
+        columns=["Algorithm", "Best Time", "Worst Time", "Average Time"]
+    )  # milliseconds
 
     print("Running experiments for Quick Sort...")
-    quick_sort_best, quick_sort_worst, quick_sort_avg = run_experiment(quick_sort, sample_size)
+    quick_sort_best, quick_sort_worst, quick_sort_avg = run_experiment(
+        quick_sort, sample_size
+    )
     print(f"Best time: {quick_sort_best * 1000:.4f} milliseconds")
     print(f"Worst time: {quick_sort_worst * 1000:.4f} milliseconds")
     print(f"Average time: {quick_sort_avg * 1000:.4f} milliseconds\n")
-    df.loc[len(df)] = ['Quick Sort', quick_sort_best * 1000, quick_sort_worst * 1000, quick_sort_avg * 1000]
+    df.loc[len(df)] = [
+        "Quick Sort",
+        quick_sort_best * 1000,
+        quick_sort_worst * 1000,
+        quick_sort_avg * 1000,
+    ]
 
     print("Running experiments for Merge Sort...")
-    merge_sort_best, merge_sort_worst, merge_sort_avg = run_experiment(merge_sort, sample_size)
+    merge_sort_best, merge_sort_worst, merge_sort_avg = run_experiment(
+        merge_sort, sample_size
+    )
     print(f"Best time: {merge_sort_best * 1000:.4f} milliseconds")
     print(f"Worst time: {merge_sort_worst * 1000:.4f} milliseconds")
     print(f"Average time: {merge_sort_avg * 1000:.4f} milliseconds\n")
-    df.loc[len(df)] = ['Merge Sort', merge_sort_best * 1000, merge_sort_worst * 1000, merge_sort_avg * 1000]
+    df.loc[len(df)] = [
+        "Merge Sort",
+        merge_sort_best * 1000,
+        merge_sort_worst * 1000,
+        merge_sort_avg * 1000,
+    ]
 
     print("Running experiments for Introsort...")
-    introsort_best, introsort_worst, introsort_avg = run_experiment(introsort_with_insertion, sample_size)
+    introsort_best, introsort_worst, introsort_avg = run_experiment(
+        introsort_with_insertion, sample_size
+    )
     print(f"Best time: {introsort_best * 1000:.4f} milliseconds")
     print(f"Worst time: {introsort_worst * 1000:.4f} milliseconds")
     print(f"Average time: {introsort_avg * 1000:.4f} milliseconds\n")
-    df.loc[len(df)] = ['Introsort', introsort_best * 1000, introsort_worst * 1000, introsort_avg * 1000]
+    df.loc[len(df)] = [
+        "Introsort",
+        introsort_best * 1000,
+        introsort_worst * 1000,
+        introsort_avg * 1000,
+    ]
 
     print("Running experiments for Timsort...")
     timsort_best, timsort_worst, timsort_avg = run_experiment(timsort, sample_size)
     print(f"Best time: {timsort_best * 1000:.4f} milliseconds")
     print(f"Worst time: {timsort_worst * 1000:.4f} milliseconds")
     print(f"Average time: {timsort_avg * 1000:.4f} milliseconds\n")
-    df.loc[len(df)] = ['Timsort', timsort_best * 1000, timsort_worst * 1000, timsort_avg * 1000]
+    df.loc[len(df)] = [
+        "Timsort",
+        timsort_best * 1000,
+        timsort_worst * 1000,
+        timsort_avg * 1000,
+    ]
 
     print("Running experiments for Adaptive Partition Sort...")
-    aps_best, aps_worst, aps_avg = run_experiment(lambda data: adaptive_partition_sort(data, 0), sample_size)
+    aps_best, aps_worst, aps_avg = run_experiment(
+        lambda data: adaptive_partition_sort(data, 0), sample_size
+    )
     print(f"Best time: {aps_best * 1000:.4f} milliseconds")
     print(f"Worst time: {aps_worst * 1000:.4f} milliseconds")
     print(f"Average time: {aps_avg * 1000:.4f} milliseconds\n")
-    df.loc[len(df)] = ['APS', aps_best * 1000, aps_worst * 1000, aps_avg * 1000]
+    df.loc[len(df)] = ["APS", aps_best * 1000, aps_worst * 1000, aps_avg * 1000]
 
     # cut off the last 6 digits of df
-    df['Best Time'] = df['Best Time'].apply(lambda x: round(x, 6))
-    df['Worst Time'] = df['Worst Time'].apply(lambda x: round(x, 6))
-    df['Average Time'] = df['Average Time'].apply(lambda x: round(x, 6))
+    df["Best Time"] = df["Best Time"].apply(lambda x: round(x, 6))
+    df["Worst Time"] = df["Worst Time"].apply(lambda x: round(x, 6))
+    df["Average Time"] = df["Average Time"].apply(lambda x: round(x, 6))
 
-    df.to_csv('results_time.csv', index=False)
+    df.to_csv("results_time.csv", index=False)
     print(df)

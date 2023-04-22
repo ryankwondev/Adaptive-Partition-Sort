@@ -50,8 +50,8 @@ def adaptive_partition_sort(arr, threshold=0):
         merge_sort(arr, mid + 1, high)
 
         # Merge subarrays
-        left = arr[low:mid + 1]
-        right = arr[mid + 1:high + 1]
+        left = arr[low : mid + 1]
+        right = arr[mid + 1 : high + 1]
         i = j = 0
         k = low
         while i < len(left) and j < len(right):
@@ -76,7 +76,7 @@ def adaptive_partition_sort(arr, threshold=0):
     quick_sort(arr, 0, len(arr) - 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import random
     import time
     import tracemalloc
@@ -92,7 +92,7 @@ if __name__ == '__main__':
         adaptive_partition_sort(arr, APS_THRESHOLD)
         end = time.time()
         t.append(end - start)
-        print('Time Routine:', i, sorted(rand) == arr)
+        print("Time Routine:", i, sorted(rand) == arr)
 
     for i in range(64):
         rand = [random.randint(0, 100000) for _ in range(100000)]
@@ -102,14 +102,14 @@ if __name__ == '__main__':
         current, peak = tracemalloc.get_traced_memory()
         tracemalloc.stop()
         m.append(peak)
-        print('Memory Routine:', i, sorted(rand) == arr)
+        print("Memory Routine:", i, sorted(rand) == arr)
 
-    print(f'[Adaptive Partition Sort] T={APS_THRESHOLD}')
+    print(f"[Adaptive Partition Sort] T={APS_THRESHOLD}")
 
-    print('Best time(ms): ', min(t) * 1000)
-    print('Worst time(ms): ', max(t) * 1000)
-    print('Average time(ms): ', sum(t) / len(t) * 1000)
+    print("Best time(ms): ", min(t) * 1000)
+    print("Worst time(ms): ", max(t) * 1000)
+    print("Average time(ms): ", sum(t) / len(t) * 1000)
 
-    print('Best space(bytes): ', min(m))
-    print('Worst space(bytes): ', max(m))
-    print('Average space(bytes): ', sum(m) / len(m))
+    print("Best space(bytes): ", min(m))
+    print("Worst space(bytes): ", max(m))
+    print("Average space(bytes): ", sum(m) / len(m))

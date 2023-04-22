@@ -17,7 +17,7 @@ quick_sort_t, quick_sort_m = [], []
 N = 10000
 
 # time
-for i in range(1, N+1):
+for i in range(1, N + 1):
     rand = [random.randint(0, i) for _ in range(i)]
 
     start = time.time()
@@ -47,14 +47,14 @@ plt.plot(aps_t)
 plt.plot(timsort_t)
 plt.plot(introsort_t)
 plt.plot(quick_sort_t)
-plt.legend(['APS', 'Timsort', 'Introsort', 'Quick_sort'])
-plt.title('Time Trends')
+plt.legend(["APS", "Timsort", "Introsort", "Quick_sort"])
+plt.title("Time Trends")
 plt.tight_layout()
-plt.savefig('./images/trends_time.png')
+plt.savefig("./images/trends_time.png")
 plt.show()
 
 # memory
-for i in range(1, N+1):
+for i in range(1, N + 1):
     rand = [random.randint(0, i) for _ in range(i)]
 
     tracemalloc.start()
@@ -88,8 +88,8 @@ plt.plot(aps_m)
 plt.plot(timsort_m)
 plt.plot(introsort_m)
 plt.plot(quick_sort_m)
-plt.legend(['APS', 'Timsort', 'Introsort', 'Quicksort'])
-plt.title('Memory Trends')
+plt.legend(["APS", "Timsort", "Introsort", "Quicksort"])
+plt.title("Memory Trends")
 plt.tight_layout()
-plt.savefig('./images/trends_mem.png')
+plt.savefig("./images/trends_mem.png")
 plt.show()
