@@ -1,4 +1,7 @@
-def adaptive_partition_sort(arr):
+import copy
+
+
+def quick_aps(arr):
     def quick_sort(arr, low, high):
         if low >= high:
             return
@@ -48,7 +51,7 @@ if __name__ == "__main__":
         rand = [random.randint(0, 100000) for _ in range(100000)]
         arr = rand.copy()
         start = time.time()
-        adaptive_partition_sort(arr)
+        quick_aps(arr)
         end = time.time()
         t.append(end - start)
         print("Time Routine:", i, sorted(rand) == arr)
@@ -57,7 +60,7 @@ if __name__ == "__main__":
         rand = [random.randint(0, 100000) for _ in range(100000)]
         arr = rand.copy()
         tracemalloc.start()
-        adaptive_partition_sort(arr)
+        quick_aps(arr)
         current, peak = tracemalloc.get_traced_memory()
         tracemalloc.stop()
         m.append(peak)
