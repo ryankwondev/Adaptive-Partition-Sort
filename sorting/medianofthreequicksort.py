@@ -47,7 +47,7 @@ if __name__ == "__main__":
         m.append(peak)
         print("Memory Routine:", i, sorted(rand) == arr)
 
-    print("[Median of Three Quick Sort]")
+    print("[IntroSort]")
 
     print("Best time(ms): ", min(t) * 1000)
     print("Worst time(ms): ", max(t) * 1000)
