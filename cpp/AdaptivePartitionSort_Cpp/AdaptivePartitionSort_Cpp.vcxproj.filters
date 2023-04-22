@@ -18,12 +18,30 @@
     <ClInclude Include="APS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="APS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

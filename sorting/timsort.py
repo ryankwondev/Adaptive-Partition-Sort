@@ -71,7 +71,7 @@ def timsort(array):
             mid = min(n - 1, left + size - 1)
             right = min((left + 2 * size - 1), (n - 1))
             merge(array, left, mid, right)
-
+            print(left, mid, right)
         size = 2 * size
 
 
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     t, m = [], []
 
     for i in range(64):
-        rand = [random.randint(0, 100000) for _ in range(100000)]
+        rand = [random.randint(0, 100) for _ in range(100)]
         arr = rand.copy()
         start = time.time()
         timsort(arr)

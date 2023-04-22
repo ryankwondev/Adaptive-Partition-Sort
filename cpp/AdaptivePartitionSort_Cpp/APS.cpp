@@ -52,7 +52,7 @@ void APS::MergeSort(int* arr, int low, int high) {
 		register int k = -1;
 		register int* tmp = new int[high - low + 1];
 		while (left <= mid and right <= high) {
-			if (arr[left] <= arr[right]) arr[++k] = arr[left++];
+			if (arr[left] <= arr[right]) tmp[++k] = arr[left++];
 			else tmp[++k] = arr[right++];
 		}
 		register int i = left - 1;

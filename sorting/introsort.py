@@ -25,9 +25,11 @@ def heapsort(arr, start, end):
 
 
 def build_max_heap(arr, start, end):
+    print("!", start , end)
     length = end - start
     for i in range(length // 2 - 1, -1, -1):
         max_heapify(arr, start, end, i)
+        print(start, end, i)
 
 
 def max_heapify(arr, start, end, i):
@@ -61,12 +63,15 @@ def partition(arr, start, end):
             done = True
         else:
             arr[left], arr[right] = arr[right], arr[left]
-
     arr[start], arr[right] = arr[right], arr[start]
     return right
 
 
 if __name__ == '__main__':
+    arr= [ 9, 5, 5, 3, 6, 5, 8, 8, 8, 3, 4, 3, 8, 2, 3, 2, 4, 2, 2, 1, 5, 2, 1, 7, 8, 9, 6, 6, 8, 2, 2, 9, 1, 7, 4, 6, 0, 7, 1, 1, 2, 9, 2, 3, 7, 6, 5, 4, 1, 7 ]
+    introsort(arr)
+    print(arr)
+    """
     import random
     import time
     import tracemalloc
@@ -101,3 +106,4 @@ if __name__ == '__main__':
     print('Best space(bytes): ', min(m))
     print('Worst space(bytes): ', max(m))
     print('Average space(bytes): ', sum(m) / len(m))
+    """
