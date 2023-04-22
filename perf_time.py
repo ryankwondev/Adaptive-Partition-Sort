@@ -1,6 +1,8 @@
 import random
 import time
+import sys
 
+sys.setrecursionlimit(10000000)
 import pandas as pd
 
 from sorting.aps import adaptive_partition_sort
