@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,pycharm,c++,visualstudio,clion
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,pycharm,c++,visualstudio,clion
 
+.idea
+
 ### C++ ###
 # Prerequisites
 *.d
