@@ -4,7 +4,7 @@ import tracemalloc
 
 import matplotlib.pyplot as plt
 
-from sorting.aps import adaptive_partition_sort
+from sorting.quick_aps import quick_aps
 from sorting.introsort import introsort
 from sorting.timsort import timsort
 from sorting.quicksort import quick_sort
@@ -14,14 +14,14 @@ timsort_t, timsort_m = [], []
 introsort_t, introsort_m = [], []
 quick_sort_t, quick_sort_m = [], []
 
-N = 10000
+N = 5000
 
 # time
 for i in range(1, N + 1):
     rand = [random.randint(0, i) for _ in range(i)]
 
     start = time.time()
-    arr = adaptive_partition_sort(rand)
+    arr = quick_aps(rand)
     end = time.time()
     aps_t.append((end - start) * 1000)
 
@@ -58,7 +58,7 @@ for i in range(1, N + 1):
     rand = [random.randint(0, i) for _ in range(i)]
 
     tracemalloc.start()
-    arr = adaptive_partition_sort(rand)
+    arr = quick_aps(rand)
     current, peak = tracemalloc.get_traced_memory()
     aps_m.append(peak)
     tracemalloc.stop()
