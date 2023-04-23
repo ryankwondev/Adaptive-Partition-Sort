@@ -36,9 +36,9 @@ inline void TimSort::Merge(int* arr, int low, int mid, int high) {
 	while (i < mid) tmp[++k] = arr[++i];
 	i = right - 1;
 	while (i < high) tmp[++k] = arr[++i];
-	i = low - 1;
-	k = -1;
-	while (i < high) arr[++i] = tmp[++k];
+	i = high + 1;
+	k = high - low + 1;
+	while (k) arr[--i] = tmp[--k];
 	delete[] tmp;
 }
 

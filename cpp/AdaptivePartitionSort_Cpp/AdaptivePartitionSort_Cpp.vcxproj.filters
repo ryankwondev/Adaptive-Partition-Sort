@@ -27,6 +27,9 @@
     <ClInclude Include="TimSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TimePerfTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="APS.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TimSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimePerfTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
