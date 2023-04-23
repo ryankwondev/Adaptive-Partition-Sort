@@ -33,7 +33,7 @@ int main() {
 	arr = array;
 	APS::Sort(arr.GetArr(), arr.GetSize());
 	end = clock();
-	cout << "ATS : " << end - start << "ms" << endl;
+	cout << "APS : " << end - start << "ms" << endl;
 	cout << "Accuracy : " << arr.CheckSorted() << endl << endl;
 
 	arr = array;
