@@ -1,5 +1,7 @@
 #include "APS.h"
 
+#define THRESHOLD 0
+
 void inline swap(int& a, int& b) {
 	register int t = a;
 	a = b;
@@ -8,7 +10,7 @@ void inline swap(int& a, int& b) {
 
 void APS::QuickSort(int* arr, int low, int high) {
 	if (low >= high) return;
-	
+
 	unsigned int j = high + 1;
 
 	{
@@ -30,8 +32,38 @@ void APS::QuickSort(int* arr, int low, int high) {
 		}
 	}
 
-	QuickSort(arr, low, j);
-	QuickSort(arr, j + 1, high);
+	if (j - low < THRESHOLD) MergeSort(arr, low, j);
+	else QuickSort(arr, low, j);
+
+	if (high - j <= THRESHOLD) MergeSort(arr, j + 1, high);
+	else QuickSort(arr, j + 1, high);
+}
+
+void APS::MergeSort(int* arr, int low, int high) {
+	if (low >= high) return;
+
+	int mid = (low + high) >> 1;
+	MergeSort(arr, low, mid);
+	MergeSort(arr, mid + 1, high);
+
+	{
+		register int left = low;
+		register int right = mid + 1;
+		register int k = -1;
+		register int* tmp = new int[high - low + 1];
+		while (left <= mid and right <= high) {
+			if (arr[left] <= arr[right]) tmp[++k] = arr[left++];
+			else tmp[++k] = arr[right++];
+		}
+		register int i = left - 1;
+		while (i < mid) tmp[++k] = arr[++i];
+		i = right - 1;
+		while (i < high) tmp[++k] = arr[++i];
+		i = high + 1;
+		k = high - low + 1;
+		while (k) arr[--i] = tmp[--k];
+		delete[] tmp;
+	}
 }
 
 void APS::Sort(int* arr, unsigned int size) {

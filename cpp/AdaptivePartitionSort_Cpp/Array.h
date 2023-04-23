@@ -6,11 +6,11 @@ using namespace std;
 class Array {
 public:
 	Array();
-	Array(Array& arr);
+	Array(const Array& arr);
 	~Array();
 	void CreateRandomArray(int size, int range);
 	bool CheckSorted();
-	int GetSize();
+	int GetSize() const;
 
 	vector<int>* GetVector();
 	int* GetArr();

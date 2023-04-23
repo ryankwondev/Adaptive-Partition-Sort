@@ -6,7 +6,7 @@ Array::Array() {
 	this->size = 0;
 }
 
-Array::Array(Array& arr) {
+Array::Array(const Array& arr) {
 	this->arr = new int[arr.GetSize()];
 	for (int i = 0; i < arr.GetSize(); i++) {
 		this->arr[i] = arr.arr[i];
@@ -39,7 +39,7 @@ bool Array::CheckSorted() {
 	return arr_chk || vec_chk;
 }
 
-int Array::GetSize() {
+int Array::GetSize() const {
 	return this->size;
 }
 
