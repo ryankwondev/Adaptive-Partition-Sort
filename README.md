@@ -18,12 +18,14 @@ Time Complexity <br/> (APS/Timsort/introsort/quicksort)           |  Memory Comp
 
 ### Developed by:
 
-- Ryan Donghan Kwon, Hana Academy Seoul (kznm.develop@gmail.com)
+- Ryan Donghan Kwon[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0000-0003-3458-1301), Hana Academy Seoul (ryankwon@ieee.org)
 - DoHyun Lim, Korea Science Academy of KAIST (shiueo.csh@gmail.com)
 
 ### Research Contributers:
-- Jeongyeon Park, Hana Academy Seoul.
+- Jeongyeon Park, Hana Academy Seoul (has_21073@hana.hs.kr) for Build a strategy for advanced validation of algorithms with data diversification, etc
+- Taewoo Yu[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0009-0003-3666-1791), Korea Science Academy of KAIST (clif1593@gmail.com) for Reproduce algorithms in C++ to get more objective data on algorithmic competitiveness, etc
 
 ### Special thanks to:
 
-- [Jaeon Park](https://github.com/finalchild)[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0009-0008-3144-4903) for Validate APS algorithms and optimize algorithms of comparison 
+- Jaeon Park[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0009-0008-3144-4903) (me@finalchild.dev) for Validate APS algorithms and optimize algorithms of comparison
+
