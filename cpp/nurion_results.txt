@@ -1,0 +1,17 @@
+APS : 187620ms
+Accuracy : 1
+
+Intro Sort : 136123ms
+Accuracy : 1
+
+Tim Sort : 170996ms
+Accuracy : 1
+
+
+=== C/C++ Standard Sorting Algorithms ===
+
+std::sort : 421456ms
+Accuracy : 1
+
+std::qsort : 225914ms
+Accuracy : 1
