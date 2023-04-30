@@ -40,15 +40,15 @@ def quick_sort_improved_mid3(arr, start, end):
     
     left, right = start + 1, end
     arr[mid], arr[start] = arr[start], arr[mid]
-    pivot = start
+    pivot = arr[start]
 
     while left <= right:
-        while left <= end and arr[left] <= arr[pivot]:
+        while left <= end and arr[left] <= pivot:
             left += 1
-        while right > start and arr[right] >= arr[pivot]:
+        while right > start and arr[right] >= pivot:
             right -= 1
         if left > right:
-            arr[right], arr[pivot] = arr[pivot], arr[right]
+            arr[right], arr[start] = pivot, arr[right]
         else:
             arr[right], arr[left] = arr[left], arr[right]
     
