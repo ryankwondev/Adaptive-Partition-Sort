@@ -7,7 +7,12 @@ import matplotlib.pyplot as plt
 from sorting.quick_aps import quick_aps
 from sorting.introsort import introsort
 from sorting.timsort import timsort
-from sorting.quicksort import quick_sort
+from sorting.quicksort import quick_imp_wrapper as quick_sort
+
+# RecursionError: maximum recursion depth exceeded
+import sys
+
+sys.setrecursionlimit(10 ** 6)
 
 aps_t, aps_m = [], []
 timsort_t, timsort_m = [], []
