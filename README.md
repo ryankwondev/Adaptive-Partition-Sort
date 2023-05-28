@@ -20,7 +20,7 @@ time complexity.
 ### Research Contributers:
 - Jeongyeon Park, Hana Academy Seoul (has_21073@hana.hs.kr) for Build a strategy for advanced validation of algorithms with data diversification, etc
 - Taewoo Yu[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0009-0003-3666-1791), Korea Science Academy of KAIST (clif1593@gmail.com) for Reproduce algorithms in C++ to get more objective data on algorithmic competitiveness, etc
-- Jeongsik Jeongsik[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0000-0002-9349-1704), Kyunghee University (ori@khu.ac.kr) for 연구 고도화 및 적절한 $T$값에 대한 심화적인 연구
+- Jeongsik Jeongsik[<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="16px">](https://orcid.org/0000-0002-9349-1704), Kyunghee University (ori@khu.ac.kr) for Advance research and find the right $T$ value
 
 ### Special thanks to:
 
