@@ -4,9 +4,9 @@ import tracemalloc
 import pandas as pd
 
 from sorting.aps import adaptive_partition_sort
-from sorting.introsort_w_insert import introsort_with_insertion
+from sorting.introsort import introsort
 from sorting.mergesort import merge_sort
-from sorting.quicksort import quick_sort
+from sorting.quicksort import quick_imp_wrapper
 from sorting.timsort import timsort
 
 rand_dataset = []
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     print("Running experiments for Quick Sort...")
     quick_sort_best, quick_sort_worst, quick_sort_avg = run_experiment(
-        quick_sort, sample_size
+        quick_imp_wrapper, sample_size
     )
     print(f"Best memory: {quick_sort_best:.4f} B")
     print(f"Worst memory: {quick_sort_worst:.4f} B")
@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     print("Running experiments for Introsort...")
     introsort_best, introsort_worst, introsort_avg = run_experiment(
-        introsort_with_insertion, sample_size
+        introsort, sample_size
     )
     print(f"Best memory: {introsort_best:.4f} B")
     print(f"Worst memory: {introsort_worst:.4f} B")
@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
     print("Running experiments for Adaptive Partition Sort...")
     aps_best, aps_worst, aps_avg = run_experiment(
-        lambda data: adaptive_partition_sort(data, 0), sample_size
+        lambda data: adaptive_partition_sort(data, 1000), sample_size
     )
     print(f"Best memory: {aps_best:.4f} B")
     print(f"Worst memory: {aps_worst:.4f} B")

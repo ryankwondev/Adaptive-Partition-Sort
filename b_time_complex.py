@@ -4,9 +4,9 @@ import time
 import pandas as pd
 
 from sorting.aps import adaptive_partition_sort
-from sorting.introsort_w_insert import introsort_with_insertion
+from sorting.introsort import introsort
 from sorting.mergesort import merge_sort
-from sorting.quicksort import quick_sort
+from sorting.quicksort import quick_imp_wrapper
 from sorting.timsort import timsort
 
 rand_dataset = []
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
     print("Running experiments for Quick Sort...")
     quick_sort_best, quick_sort_worst, quick_sort_avg = run_experiment(
-        quick_sort, sample_size
+        quick_imp_wrapper, sample_size
     )
     print(f"Best time: {quick_sort_best * 1000:.4f} milliseconds")
     print(f"Worst time: {quick_sort_worst * 1000:.4f} milliseconds")
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
     print("Running experiments for Introsort...")
     introsort_best, introsort_worst, introsort_avg = run_experiment(
-        introsort_with_insertion, sample_size
+        introsort, sample_size
     )
     print(f"Best time: {introsort_best * 1000:.4f} milliseconds")
     print(f"Worst time: {introsort_worst * 1000:.4f} milliseconds")
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
     print("Running experiments for Adaptive Partition Sort...")
     aps_best, aps_worst, aps_avg = run_experiment(
-        lambda data: adaptive_partition_sort(data, 0), sample_size
+        lambda data: adaptive_partition_sort(data, 1000), sample_size
     )
     print(f"Best time: {aps_best * 1000:.4f} milliseconds")
     print(f"Worst time: {aps_worst * 1000:.4f} milliseconds")

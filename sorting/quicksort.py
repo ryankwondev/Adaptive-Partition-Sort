@@ -27,6 +27,10 @@ def quick_sort_improved(arr, start, end):
     quick_sort_improved(arr, start, right - 1)
     quick_sort_improved(arr, right + 1, end)
 
+
+def quick_imp_wrapper(arr):
+    quick_sort_improved(arr, 0, len(arr) - 1)
+
 def quick_sort_improved_mid3(arr, start, end):
     if start >= end:
         return
