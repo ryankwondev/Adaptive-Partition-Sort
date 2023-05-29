@@ -19,8 +19,8 @@ def generate_data(size):
 def run_experiment(algorithm, sample_size):
     elapsed_mem = []
     for i in range(64):
-        # data = generate_data(sample_size)
-        data = rand_dataset[i]
+        data = generate_data(sample_size)
+        # data = rand_dataset[i]
         tracemalloc.start()
         algorithm(data)
         elapsed_mem.append(tracemalloc.get_traced_memory()[1])

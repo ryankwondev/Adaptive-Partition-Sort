@@ -1,6 +1,0 @@
-Algorithm,Best Memory,Worst Memory,Average Memory
-Quick Sort,3456,4352,3772.5
-Merge Sort,2000048,2001240,2000078.875
-Introsort,1324,1324,1324.0
-Timsort,839676,839676,839676.0
-APS,7752,7880,7797.375

@@ -19,8 +19,8 @@ def generate_data(size):
 def run_experiment(algorithm, sample_size):
     elapsed_times = []
     for i in range(64):
-        # data = generate_data(sample_size)
-        data = rand_dataset[i]
+        data = generate_data(sample_size)
+        # data = rand_dataset[i]
         start_time = time.time()
         algorithm(data)
         end_time = time.time()
